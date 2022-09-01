@@ -14,6 +14,12 @@ const (
 	g   = 1 << (iota * 10)
 )
 
+func Map2String(m map[string]string) (ret string) {
+	for k, v := range m {
+		ret += fmt.Sprintf("%s=%s\n", k, v)
+	}
+	return
+}
 func main() {
 	fmt.Println(b)
 	fmt.Println(c)
